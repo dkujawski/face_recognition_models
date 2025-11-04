@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.22.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "face-recognition-models"
+version = "1.0.0"
+description = "Pre-trained face recognition models packaged for easy distribution."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Adam Geitgey", email = "ageitgey@gmail.com" },
+]
+maintainers = [
+  { name = "Face Recognition Maintainers" },
+]
+keywords = ["face-recognition", "dlib", "models"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/dkujawski/face_recognition_models"
+Repository = "https://github.com/dkujawski/face_recognition_models"
+Issues = "https://github.com/dkujawski/face_recognition_models/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["face_recognition_models"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "face_recognition_models",
+  "LICENSE",
+  "README.md",
+]
+
+[tool.uv]
+default-groups = ["dev"]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.5",
+]
