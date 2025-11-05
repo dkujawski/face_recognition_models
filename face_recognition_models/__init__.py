@@ -12,7 +12,7 @@ __all__ = [
 ]
 
 # Keep the version in sync with pyproject.toml.
-__version__: Final[str] = "0.3.0"
+__version__: Final[str] = "0.4.0"
 
 _MODELS_DIR: Final = files(__name__) / "models"
 
